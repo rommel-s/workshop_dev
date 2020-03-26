@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
     background: #e5e5e5;
     color: #25282b;
@@ -6,6 +7,10 @@ body {
     
     margin: 0;
     
+}
+
+body.hideScroll {
+    overflow: hidden;
 }
 
 a {
@@ -24,6 +29,32 @@ p, .description {
     letter-spacing: 0.1;
 }
 
+.button {
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    
+    color: white;
+    background: #ff5e84;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button:hover {
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
+    text-decoration: none;
+
+}
+
+/* PADRÃO */
+
 #container {
     
     width: 80%;
@@ -36,7 +67,7 @@ p, .description {
 
 #intro {
     width: 300px;
-    margin-right: 30px;
+    margin-right: 70px;
 }
 
 main {
@@ -74,23 +105,6 @@ button:hover {
     text-decoration: underline;
 }
 
-button.fat {
-    
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    
-    color: white;
-    background: #ff5e84;
-
-    text-decoration: none;
-
-}
-
-button.fat:hover {
-    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
-
-}
 
 footer {
     text-align: center;
@@ -161,8 +175,9 @@ footer a:hover {
     position: absolute;
 
     top: 0;
-    width: 100vw;
-    height: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     display: flex;
     justify-content: center;
@@ -170,9 +185,12 @@ footer a:hover {
     transition: 400ms;
 }
 
+#modal.addScroll {
+    overflow: auto;
+}
+
 #modal .content {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 15%;
     color: #fff;
 
 }
@@ -186,7 +204,7 @@ footer a:hover {
 #modal form {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 15%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -195,7 +213,7 @@ footer a:hover {
 }
 
 .input-wrapper {
-    margin: 20px 0;
+    margin: 8px 0;
 }
 
 form input, form textarea {
@@ -263,4 +281,74 @@ form button:hover {
 #modal.hide {
     opacity: 0;
     visibility: hidden;
+}
+
+/* IDEAS.HTML */
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 70px;
+}
+
+#page-ideas nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#page-ideas nav li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+#page-ideas nav li a {
+    color: #25282b;
+}
+
+#page-ideas nav li a.button {
+    color: white;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+
+}
+
+
+#page-ideas section#title {
+    text-align: center;
+
+}
+
+#page-ideas section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+#page-ideas section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#page-ideas section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+#page-ideas section#ideas .idea {
+    margin: 0;
+}
+
+#page-ideas section#title,
+#page-ideas section#ideas,
+#page-ideas footer {
+    margin-bottom: 65px;
 }
